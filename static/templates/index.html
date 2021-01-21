@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tala credit scoring</title>
+    <!---------Links ------------------>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <h1>Predict Default Status</h1>
+
+
+    <div class="container">
+        <h2 class="ml-2 mt-5">Fill the Your For Loan Prediction *</h2>
+        <div class="col-sm-10 col-md-11 mt-2">
+            <div class="form">
+                <form action="{{ url_for('predict')}}"method="post">
+                
+                 <div >
+                        <label for="">Application Day</label><br>
+                        <input type="number" name="application_day" id="cream" class="form-control count">
+                    </div>
+                    <div>
+                        <label for="">Application Month</label><br>
+                        <select name="application_month" id="" required>
+                       <option class="options" value="">1</option>
+                       <option class="options" value="">2</option>
+                       <option class="options" value="">3</option>
+                       <option class="options" value="">4</option>
+                       <option class="options" value="">5</option>
+                       <option class="options" value="">6</option>
+                       <option class="options" value="">7</option>
+                       <option class="options" value="">8</option>
+                       <option class="options" value="">9</option>
+                       <option class="options" value="">10</option>
+                       <option class="options" value="">11</option>
+                       <option class="options" value="">12</option>
+                   </select>
+                    </div>
+                    <div class="good-work mt-2">
+                        <label for="">Education</label><br>
+                        <select name="education" id="" required>
+                    <option  value="">1</option>
+                    <option  value="">0</option>
+                     <option  value="">2</option>
+                      <option  value="">3</option>
+                       <option  value="">4</option>
+                        <option  value="">5</option>
+                    </select>
+                    </div>
+                    <div class="good-work">
+                        <label for="">Gender</label><br>
+                        <select name="" id="" required>
+                        <option  value="">0</option>
+                        <option  value="">1</option>
+                        
+                    </select>
+                    </div>
+                    <div class="good-work mt-3">
+                        <label for="">Age</label><br>
+                        <input type="number" name="age" id="cream" class="form-control count">
+                    </div>
+                    
+                    <div class="good-work">
+                        <label for="">Home Address</label><br>
+                        <select name="home_address" id="" required>
+                        <option  value="">1</option>
+                        <option  value="">2</option>
+                        <option  value="">3</option>  
+                    </select>
+                    </div>
+                    <div class="good-work">
+                        <label for="">Income</label><br>
+                        <input type="number" name="income" id="cream" class="form-control count">
+                    </div>
+                    
+                    <div class="good-work">
+                        <label for="">Times of Application</label><br>
+                        <select name="first_time" id="" required>
+                        <option  value="">1</option>
+                        <option  value="">2</option>
+                        <option  value="">3</option>  
+                        <option  value="">4</option>  
+                    </select>
+                    </div>
+                    <div>
+                    <button type="submit" class="">Predict</button>
+</div>
+                </form>
+                <br>
+                <br>
+                {{ prediction_text }}
+            </div>
+        </div>
+    </div>
+    <footer>
+        <hr>
+        <div class="copyright">
+            &copysr; CursorHub Technologies LTD
+        </div>
+    </footer>
+
+
+
+    <!------------------------Javascript-->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>
