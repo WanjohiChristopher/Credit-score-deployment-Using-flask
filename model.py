@@ -9,17 +9,12 @@ import pandas as pd
 import pickle
 
 df=pd.read_csv('train3.csv')
-df['education'].fillna(df['education'].median(),inplace=True)
-#df['gender']=df['gender'].replace({'M':0,'F':1})
-#df['education']=df['education'].replace({'SCH':0,'UGR':1,'GRD':2,'PGR':3,'ACD':4,'N/A':5})
-# splitting into features(X) and target(y)
+
 X=df.drop(columns=['default'])
 y=df.default
 
 # scaling our features
-#from sklearn.preprocessing import StandardScaler
-#scaler=StandardScaler()
-#scaled=StandardScaler().fit_transform(X)
+
 from sklearn.preprocessing import MinMaxScaler
 X_sc = MinMaxScaler().fit_transform(X)
 
