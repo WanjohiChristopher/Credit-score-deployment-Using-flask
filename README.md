@@ -1,4 +1,4 @@
-# Credit-score-deployment-Using-flask
-deployment
+# Credit-score
+
 
 ## Grading and Scores of credit score,credit rating and creditinfo prediction
